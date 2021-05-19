@@ -1,0 +1,45 @@
+.kt-content{
+  .kt-grid{
+    .rug{
+      .rug-items{
+        &.__card{
+          min-height: 10px;
+        }
+      }
+    }
+  }
+}
+
+.more-info {
+  font-size: 1.1rem;
+  i {
+    font-size: 1.2rem;
+  }
+}
+
+.tooltip-col{
+  i {
+    font-size: 1.75rem;
+    cursor: pointer;
+  }
+}
+
+.label {
+  &.label-inline{
+    padding: .15rem .75rem;
+    border-radius: .42rem;
+  }
+  &.label-light-info {
+    /*color: #8950fc;
+    background-color: #eee5ff;*/
+    color: #000;
+    background-color: #f9eacc;
+  }
+}
+i{
+  &.field-note{
+    margin-top: 5px;
+    display: inline-block;
+    font-size: 12px;
+  }
+}

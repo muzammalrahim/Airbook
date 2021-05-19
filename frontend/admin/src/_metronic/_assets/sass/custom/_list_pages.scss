@@ -1,0 +1,21 @@
+.kt-section{
+  .dataTables_wrapper{
+    table{
+      &.dataTable{
+        &.dtr-inline{
+          &.collapsed{
+            > tbody{
+              > tr[role="row"]{
+                >td {
+                  &:first-child{
+                    padding-left: 40px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

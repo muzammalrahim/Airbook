@@ -1,0 +1,170 @@
+.rug .rug-handle:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    border-radius: 4px;
+    border-color: #5d78ff !important;
+    border: 2px dashed #ebedf2;
+}
+
+.rug {
+    font-family: kt-get($kt-font-families, regular);
+    .rug-handle{
+       svg{
+           &.rug-handle-icon{
+               display: none;
+           }
+       }
+        .rug-handle-info{
+            .rug-handle-drop-text{
+                font-size: 14px;
+            }
+        }
+        .rug-handle-drop-text, span {
+			display: none !important;
+		}
+    }
+}
+.dzu-dropzone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 120px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    transition: all .15s linear;
+    border-color: #5d78ff !important;
+    border: 2px dashed #ebedf2;
+    border-radius: 4px;
+}
+
+.dzu-inputLabel,
+.dzu-inputLabelWithFiles,
+.dzu-previewFileName,
+.dzu-submitButton {
+    font-family: inherit;
+}
+
+.dzu-previewButton{
+  background-size: 100%;
+}
+
+@include kt-responsive-below(1200px) {
+    .dzu-previewContainer{
+        flex-direction: column;
+    }
+}
+
+.rug-item{
+  position: relative;
+    .card-crop-overlay {
+        height: 200px;
+        position: absolute;
+        width: 200px;
+        background: rgba(0,0,0,0.6);
+        top: 10px;
+        display: none;
+        border-radius: 5px;
+        color: #fff;
+        padding: 30% 20%;
+        font-size: 16px;
+        text-align: center;
+        z-index: 39;
+    }
+  &:hover{
+    .card-crop-overlay{
+      display: block;
+    }
+  }
+    
+}
+
+.ReactGridGallery_custom-overlay{
+    .card-crop-overlay {
+        height: 75px;
+        position: absolute;
+        width: 150px;
+        background: rgba(0, 0, 0, 0.6);
+        top: 6rem;
+        pointer-events: all;
+        border-radius: 5px;
+        color: #fff;
+        padding: 16% 12%;
+        font-size: 16px;
+        text-align: center;
+        z-index: 39;
+        cursor: pointer;
+    }
+
+    .none-crop-area {
+        height: calc(100% - 75px);
+        position: absolute;
+        z-index: 40;
+        top: 0;
+        width: 150px;
+        pointer-events: all;
+        cursor: pointer;
+    }
+    .image-area {
+        height: 100%;
+        position: absolute;
+        z-index: 40;
+        top: 0;
+        width: 150px;
+        pointer-events: all;
+        cursor: pointer;
+    }
+}
+
+.nav-pills{
+    &.media-gal-nav{
+        .nav-link{
+            border: 1px solid #cecaca;
+            &.active{
+                border-color: transparent;
+            }
+        }
+    }
+}
+
+.ReactGridGallery{
+  .ReactGridGallery_tile {
+      border: 2px solid #e5e5e5;
+      border-radius: 9px;
+      overflow: hidden;
+      .ReactGridGallery_tile-viewport{
+        img{
+          object-fit: cover;
+        }
+      }
+  }
+}
+
+#readonlygallery {
+    .ReactGridGallery_tile-icon-bar {
+        display:inline;
+        div {
+            opacity:0!important;
+        }
+    }
+    .ReactGridGallery_tile {
+        cursor:pointer;
+    }
+    .ReactGridGallery_custom-overlay {
+        .MuiGrid-root {
+            cursor: pointer;
+            width: 25px;
+            height: 25px;
+            background-color: #fd397a;
+            border-radius: 2px;
+            color: white;
+            padding: 2px;
+        }
+    }
+}

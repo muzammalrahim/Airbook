@@ -1,0 +1,31 @@
+<style>
+    .btn{
+            font-family: Avenir;
+            Helvetica: sans-serif;
+            box-sizing: border-box;
+            color: #000000;
+            border: 2px solid #808080b3;
+            padding: 3px 10px;
+            text-decoration: none;
+            border-radius: 3px;
+            background-color: #74787e3d;
+        }
+</style>
+<p>
+    Dear {{ user }}
+</p>
+<p>
+    You have new message from {{sender.name}}.
+</p>
+<p>
+    {{message}}
+</p>
+<p>
+    Link: <a href="{{link}}">{{link}}</a>
+</p>
+<p>
+    <a href="{{leads_link}}"
+       style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #000000;border: 2px solid #808080b3;padding: 3px 10px;text-decoration: none;border-radius: 3px;background-color: #74787e3d;">
+        View my leads
+    </a>
+</p>

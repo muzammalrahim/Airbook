@@ -1,0 +1,46 @@
+.radioimg{
+  width: 40px;
+  padding: 5px;
+}
+
+.rchecked{
+  background: #DDDDDD;
+  border-radius: 3px;
+}
+
+.profile-image-upload{
+  height: 200px;
+  width: 200px;
+  margin-top: 30px;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  color: #333;
+  text-decoration: none;
+  transform: scale(1);
+  background-size: cover!important;
+  border: 2px solid #ddd;
+  display: inline-block;
+}
+
+.react-datepicker-wrapper{
+  display: block!important;
+}
+
+.margin-auto{
+  margin: 0 auto;
+}
+
+/* select box custom css */
+.css-yk16xz-control, .css-1pahdxg-control{
+  padding-bottom: 0.5rem !important;
+  padding-top: 0.5rem !important;
+  background-color: transparent!important;
+  border: none!important;
+  box-shadow: none!important;
+}
+
+.MuiInput-underline:before, .MuiInput-underline:after{
+  border: none!important;
+}
+
+

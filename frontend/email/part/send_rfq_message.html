@@ -1,0 +1,78 @@
+{% load account_extras %}
+<style>
+        /* A simple css reset */
+        body,table,thead,tbody,tr,td,img {
+            padding: 0;
+            margin: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+            vertical-align: top;
+        }
+
+        /* Add some padding for small screens */
+        .wrapper {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        h1,h2,h3,h4,h5,h6,p {
+            margin: 0;
+            padding: 0;
+            padding-bottom: 20px;
+            line-height: 1.6;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+        }
+
+        p,a,li {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+        }
+
+         .company-info-table th, .company-info-table td {padding: 5px 5px; border: 1px solid black;}
+
+        @media only screen and (max-width: 620px) {
+
+            .wrapper .section {
+                width: 100%;
+            }
+
+            .wrapper .column {
+                width: 100%;
+                display: block;
+            }
+        }
+    </style>
+
+    <table width="100%" class="company-info-table"  style="border:1px solid #ccc;">
+        <tbody>
+            <tr>
+                <td class="wrapper" width="600" align="center">
+                    <!-- Two columns -->
+                    <table class="section" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <th class="column" width="290" valign="top">
+                                Part Number
+                            </th>
+                           
+                            <th class="column" width="290" valign="top">
+                                Quantity
+                            </th>
+                        </tr>
+                        {% for part_request in part_requests %}
+                        <tr>
+                            <td class="column" width="290" valign="top" style="text-align: center">
+                                <a href="{{base_url}}/parts/{{part_request.id}}-{{part_request.condition.name|constructURl}}">
+                                    <span style="padding-left: 15px;">{{part_request.part_number}}</span>
+                                </a>
+                            </td>
+                           
+                            <td class="column" style="text-align: center" width="290" valign="top">
+                                {{part_request.qty}}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>

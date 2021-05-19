@@ -1,0 +1,35 @@
+.kt_section__detail{
+  .kt_detail__item_title{
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: .4rem;
+  }
+}
+
+select{
+  &.approvals{
+    option{
+      background-color: #fff;
+      color: #000;
+      &:disabled{
+        background-color: $input-disabled-bg;
+      }
+    }
+  }
+}
+
+.kt-header-menu{
+  .kt-menu__nav{
+    .kt-menu__item{
+      &.quick-add-btn{
+        > .kt-menu__link{
+          background-color: $warning;
+          color: #212529;
+          .kt-menu__link-text{
+            color: #212529;
+          }
+        }
+      }
+    }
+  }
+}

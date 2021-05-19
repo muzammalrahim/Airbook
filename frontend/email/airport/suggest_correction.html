@@ -1,0 +1,138 @@
+<style>
+        /* A simple css reset */
+        body,table,thead,tbody,tr,td,img {
+            padding: 0;
+            margin: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+            vertical-align: top;
+        }
+
+        /* Add some padding for small screens */
+        .wrapper {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        h1,h2,h3,h4,h5,h6,p {
+            margin: 0;
+            padding: 0;
+            padding-bottom: 20px;
+            line-height: 1.6;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+        }
+
+        p,a,li {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+        }
+
+         .company-info-table th, .company-info-table td {padding: 5px 5px; border: 1px solid black;}
+
+        @media only screen and (max-width: 620px) {
+
+            .wrapper .section {
+                width: 100%;
+            }
+
+            .wrapper .column {
+                width: 100%;
+                display: block;
+            }
+        }
+    </style>
+
+    <p>User {{user}} has suggest correction for the {{data.airport}}</p>
+           
+    <table width="100%" class="company-info-table"  style="border:1px solid #ccc;">
+        <tbody>
+            <tr>
+                <td class="wrapper" width="600" align="center">
+                    <!-- Two columns -->
+                    <table class="section" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="column" width="290" valign="top">
+                                Airport
+                            </td>
+                           
+                            <td class="column" width="290" valign="top">
+                                {{data.name}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="column" width="290" valign="top">
+                                Airfield Type
+                            </td>
+                           
+                            <td class="column" width="290" valign="top">
+                                {{data.airfield_type}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="column" width="290" valign="top">
+                                ICAO
+                            </td>
+                           
+                            <td class="column" width="290" valign="top">
+                                {{data.icao}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="column" width="290" valign="top">
+                                IATA
+                            </td>
+                           
+                            <td class="column" width="290" valign="top">
+                                {{data.iata}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="column" width="290" valign="top">
+                                Country
+                            </td>
+                           
+                            <td class="column" width="290" valign="top">
+                                {{data.country}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="column" width="290" valign="top">
+                                City
+                            </td>
+                           
+                            <td class="column" width="290" valign="top">
+                                {{data.city}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="column" width="290" valign="top">
+                                Longitude
+                            </td>
+                           
+                            <td class="column" width="290" valign="top">
+                                {{data.longitude}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="column" width="290" valign="top">
+                                Latitude
+                            </td>
+                           
+                            <td class="column" width="290" valign="top">
+                                {{data.latitude}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="column" width="290" valign="top">
+                                Timezone
+                            </td>
+                           
+                            <td class="column" width="290" valign="top">
+                                {{data.timezone}}
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
